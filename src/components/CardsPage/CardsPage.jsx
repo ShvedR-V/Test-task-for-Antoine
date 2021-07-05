@@ -34,7 +34,7 @@ export default function CardsPage (){
     setFilter({
       variables: {
         filter: {
-          limit: 20,
+          limit: 10,
           keywords:value,
           types: ["PODCAST"],
         },
