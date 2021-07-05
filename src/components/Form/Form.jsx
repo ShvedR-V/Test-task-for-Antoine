@@ -1,13 +1,12 @@
 import styles from "./Form.module.scss";
 import {useState} from 'react'
 
-function Input() {
-    const [value, setValue]=useState('')
-    const handleChange =(e)=> setValue(e.target.value)
+function Input({onChange, value}) {
+   
   return (
     <input
       value={value}
-      onChange={handleChange}
+      onChange={onChange}
       className={styles.input}
       placeholder="Type any keyword"
     />

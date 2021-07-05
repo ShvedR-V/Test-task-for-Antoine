@@ -1,0 +1,14 @@
+.cardsList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  @media screen and (min-width: 576px) {
+    .cardslist {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+  }
