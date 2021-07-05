@@ -1,0 +1,27 @@
+.input {
+    background:  #003238;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    outline: none;
+    color: #989898;
+    border: none;
+    margin-bottom: 13px;
+
+    &::placeholder {
+        font-family: "AvertaStd-Light";
+        color: #989898;
+        font-size: 14px;
+      }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .input {
+      font-size: 16px;
+      margin-bottom: 18px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  }
