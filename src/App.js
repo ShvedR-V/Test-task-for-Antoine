@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useLazyQuery } from "@apollo/client";
+import FILTER_CARDS from './graphql/query/cards'
+import { useEffect } from 'react';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [addVarFiller, data] = useLazyQuery(FILTER_CARDS);
+  console.log(data);
+  useEffect(()=>{
+    addVarFiller({
+      variables: {
+        filter: {
+          limit: 20,
+          keywords: "color",
+          types: ["PODCAST"],
+        },
+      },
+    });
+  })
+  return <div className="App"></div>;
 }
 
 export default App;
