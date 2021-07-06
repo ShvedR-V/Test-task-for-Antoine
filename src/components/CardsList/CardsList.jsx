@@ -6,7 +6,7 @@ export default function CardsList({cards, loading}) {
 
   if(loading) {
     return (
-      <div className="loadingWrapper">
+      <div className={styles.spinnerContainer}>
         {/**/}
       </div>
     );
