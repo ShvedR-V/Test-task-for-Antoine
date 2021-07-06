@@ -1,7 +1,6 @@
 import styles from "./Form.module.scss";
 
-function Input({onChange, value}) {
-   
+function Input({ onChange, value }) {
   return (
     <input
       value={value}

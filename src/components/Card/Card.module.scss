@@ -1,99 +1,89 @@
 .card {
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card_wrapper {
-    height: 130px;
-    overflow: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
 
-    img {
-        width: 100%;
-      }
+.card_wrapper {
+  height: 130px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
   }
-  
-  .card_info {
-    flex-grow: 1;
-    padding: 13px 12px 32px 12px;
-    background: #fff;
+}
+
+.card_info {
+  flex-grow: 1;
+  padding: 13px 12px 32px 12px;
+  background: #fff;
+}
+
+.card_category {
+  text-transform: uppercase;
+  color: #ff8615;
+  font-size: 12px;
+  font-family: "AvertaStd-Bold";
+  margin-bottom: 5px;
+}
+.card_name {
+  font-size: 18px;
+  font-family: "AvertaStd-Bold";
+  color: #000;
+  line-height: 22px;
+  margin-bottom: 6px;
+}
+
+.card_expert_name {
+  font-family: "AvertaStd-Semibold";
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.card_expert_title {
+  text-transform: uppercase;
+  font-family: "AvertaStd-Semibold";
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.card_expert_company {
+  color: #ff8615;
+  font-family: "AvertaStd-Bold";
+  font-size: 14px;
+}
+
+@media screen and (min-width: 576px) {
+  .card {
+    display: block;
+    width: 300px;
   }
-  
-  .card_category {
-    text-transform: uppercase;
-    color:#ff8615;
-    font-size: 12px;
-    font-family: "AvertaStd-Bold";
-    margin-bottom: 5px;
-  }
-  .card_name {
-    font-size: 18px;
-    font-family: "AvertaStd-Bold";
-    color: #000;
-    line-height: 22px;
-    margin-bottom: 6px;
-  }
-  
-  .card_expert_name {
-    font-family: "AvertaStd-Semibold";
-    font-size: 14px;
-    margin-bottom: 3px;
-  }
-  
-  .card_expert_title {
-    text-transform: uppercase;
-    font-family: "AvertaStd-Semibold";
-    font-size: 14px;
-    margin-bottom: 3px;
-  }
-  
-  .card_expert_company {
-    color: #ff8615;
-    font-family: "AvertaStd-Bold";
-    font-size: 14px;
-  }
-  
-  @media screen and (min-width: 576px) {
-    .card {
-      width: 300px;
-      margin-right: 20px;
-    }
-  
-    .card:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .card {
-      width:400px;
-    }
-  
-    .card:nth-child(2n) {
-      margin-right: 20px;
-    }
-  
-    .card:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-  
-  @media screen and (min-width: 1000px) {
-    .card {
-      width: 500px;
-    }
-  
-    .card:nth-child(2n) {
-      margin-right: 20px;
-    }
-  
-    .card:nth-child(3n) {
-      margin-right: 20px;
-    }
-  
-    .card:nth-child(4n) {
-      margin-right: 0;
-    }
-  }
+
+  // .card:nth-child(2n) {
+  //   margin-right: 0;
+  // }
+}
+
+@media screen and (min-width: 768px) {
+  // .card:nth-child(2n) {
+  //   margin-right: 20px;
+  // }
+
+  // .card:nth-child(3n) {
+  //   margin-right: 0;
+  // }
+}
+
+@media screen and (min-width: 1000px) {
+  // .card:nth-child(2n) {
+  //   margin-right: 20px;
+  // }
+
+  // .card:nth-child(3n) {
+  //   margin-right: 20px;
+  // }
+
+  // .card:nth-child(4n) {
+  //   margin-right: 0;
+  // }
+}

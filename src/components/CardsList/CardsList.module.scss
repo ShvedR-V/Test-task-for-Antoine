@@ -1,25 +1,21 @@
 .cardsList {
+  list-style: none;
+  padding: 0;
+}
+
+.spinnerContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 242342424;
+  font-size: 40px;
+}
+
+@media all and (max-width: 576px) {
+  .cardslist {
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
+    gap: 20px;
   }
-  
-  .spinnerContainer {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 242342424;
-    font-size: 40px;
-  }
-  
-  @media screen and (min-width: 576px) {
-    .cardslist {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-    }
-  }
+}
