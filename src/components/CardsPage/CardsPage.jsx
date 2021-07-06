@@ -1,5 +1,6 @@
 import {useEffect, useState}from  "react" ;
 import { useLazyQuery } from "@apollo/client";
+import useDebounce from '../../hook'
 
 import FILTER_CARDS from '../../graphql/query/cards'
 
@@ -18,6 +19,10 @@ export default function CardsPage (){
       
     const [setFilter, receivedData ] = useLazyQuery(FILTER_CARDS);
 
+    const debouncedSearchTerm = useDebounce(value, 300);
+
+    
+
     useEffect(()=>{
         const { loading, data, error } = receivedData;
 
@@ -26,32 +31,36 @@ export default function CardsPage (){
     if(error) setError(error);
 
     },[receivedData])
+    
 
 
 
 
   useEffect(()=>{
-    setFilter({
-      variables: {
-        filter: {
-          limit: 10,
-          keywords:value,
-          types: ["PODCAST"],
+  
+      setFilter({
+        variables: {
+          filter: {
+            limit: 10,
+            keywords:debouncedSearchTerm,
+            types: ["PODCAST"],
+          },
         },
-      },
-    });
-  },[value]);
+      });
+    
+    
+  },[debouncedSearchTerm]);
 
 
   const handleChange = (e) => setValue(e.target.value)
 
     return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
        <div className={styles.container}>
           <Title text="Search" />
           <Form value={value} onChange={handleChange} />
-          <CardsList cards={cards} />
+          <CardsList cards={cards} loading={loading} />
         </div>
   
-    </div>)
+    </section>)
 }

@@ -1,5 +1,4 @@
 import styles from "./Form.module.scss";
-import {useState} from 'react'
 
 function Input({onChange, value}) {
    

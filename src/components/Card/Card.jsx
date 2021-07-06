@@ -6,8 +6,8 @@ export default function Card({card}) {
   const cardExpertsName = card.experts[0].firstName + card.experts[0].lastName;
 
   const domen = card.image.uri.match(IMAGE_REG_EXP)[0]
+  
   const cardImage = domen + `resize/${342}x/` + card.image.uri.slice(domen.length);
-  console.log('img ' +cardImage);
 
  return (
       <li className={styles.card}>

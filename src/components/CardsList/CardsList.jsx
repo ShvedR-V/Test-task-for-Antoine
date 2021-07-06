@@ -2,9 +2,17 @@ import styles from './CardsList.module.scss';
 import Card from '../Card'
 
 
-function CardsWrapper({cards}) {
+export default function CardsList({cards, loading}) {
 
-    console.log(cards);
+  if(loading) {
+    return (
+      <div className="loadingWrapper">
+        {/**/}
+      </div>
+    );
+  }
+
+
 
 
     return (
@@ -13,4 +21,3 @@ function CardsWrapper({cards}) {
       </ul>
     );
   }
-  export default CardsWrapper;
