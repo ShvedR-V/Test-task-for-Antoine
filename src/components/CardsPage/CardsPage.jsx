@@ -11,26 +11,15 @@ import CardsList from "../CardsList";
 
 import styles from "./CardsPage.module.scss";
 
-
-
 export default function CardsPage() {
   const [query, setQuery] = useState("");
 
-  const [loading, setLoading] = useState(false);
-  const [cards, setCards] = useState(null);
-  const [error, setError] = useState("bj");
-
   const [setFilter, receivedData] = useLazyQuery(FILTER_CARDS);
 
+  const { loading, data, error } = receivedData;
+  const showError = error || (query === "error" ? "Test error for purposes" : null);
+
   const debouncedSearchTerm = useDebounce(query, 300);
-
-  useEffect(() => {
-    const { loading, data, error } = receivedData;
-
-    if (loading || !loading) setLoading(loading);
-    if (data) setCards(data.contentCards.edges);
-    if (error) setError(error);
-  }, [receivedData]);
 
   useEffect(() => {
     setFilter({
@@ -42,18 +31,20 @@ export default function CardsPage() {
         },
       },
     });
-  }, [debouncedSearchTerm]);
+  }, [debouncedSearchTerm, setFilter]);
 
   const handleChange = (e) => setQuery(e.target.value);
-
- 
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
         <Title text="Search" />
         <Form value={query} onChange={handleChange} />
-        <CardsList cards={cards} loading={loading} error={error}/>
+        <CardsList
+          cards={data?.contentCards?.edges}
+          loading={loading}
+          error={showError}
+        />
       </div>
     </section>
   );

@@ -2,15 +2,20 @@ import styles from "./CardsList.module.scss";
 import Card from "../Card";
 import Spinner from "../Spinner";
 import toast, { Toaster } from "react-hot-toast";
-
-toast.error("Bad request", {
-  style: {
-    background: "#ff8615",
-    color: "#000000",
-  },
-});
+import { useEffect } from "react";
 
 export default function CardsList({ cards, loading, error }) {
+  useEffect(() => {
+    if (error) {
+      toast.error(error, {
+        style: {
+          background: "#ff8615",
+          color: "#000000",
+        },
+      });
+    }
+  }, [error]);
+
   if (loading) {
     return (
       <div className={styles.spinnerContainer}>
@@ -26,7 +31,8 @@ export default function CardsList({ cards, loading, error }) {
           <Card key={card.name} card={card}></Card>
         ))}
       </ul>
-      {error !== null ? <Toaster position="top-center" /> : ""}
+      <Toaster position="top-center" />
+      {/* {error !== null ? <Toaster position="top-center" /> : ""} */}
     </>
   );
 }
