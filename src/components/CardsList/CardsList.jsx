@@ -32,7 +32,6 @@ export default function CardsList({ cards, loading, error }) {
         ))}
       </ul>
       <Toaster position="top-center" />
-      {/* {error !== null ? <Toaster position="top-center" /> : ""} */}
     </>
   );
 }
