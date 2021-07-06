@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/test-task-for-antoine/static/css/main.bc0f5dd9.chunk.css",
+    "main.js": "/test-task-for-antoine/static/js/main.93662ed8.chunk.js",
+    "main.js.map": "/test-task-for-antoine/static/js/main.93662ed8.chunk.js.map",
+    "runtime-main.js": "/test-task-for-antoine/static/js/runtime-main.b98e6bc6.js",
+    "runtime-main.js.map": "/test-task-for-antoine/static/js/runtime-main.b98e6bc6.js.map",
+    "static/js/2.fd5bc95f.chunk.js": "/test-task-for-antoine/static/js/2.fd5bc95f.chunk.js",
+    "static/js/2.fd5bc95f.chunk.js.map": "/test-task-for-antoine/static/js/2.fd5bc95f.chunk.js.map",
+    "static/js/3.dd33ab0b.chunk.js": "/test-task-for-antoine/static/js/3.dd33ab0b.chunk.js",
+    "static/js/3.dd33ab0b.chunk.js.map": "/test-task-for-antoine/static/js/3.dd33ab0b.chunk.js.map",
+    "index.html": "/test-task-for-antoine/index.html",
+    "static/css/main.bc0f5dd9.chunk.css.map": "/test-task-for-antoine/static/css/main.bc0f5dd9.chunk.css.map",
+    "static/js/2.fd5bc95f.chunk.js.LICENSE.txt": "/test-task-for-antoine/static/js/2.fd5bc95f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b98e6bc6.js",
+    "static/js/2.fd5bc95f.chunk.js",
+    "static/css/main.bc0f5dd9.chunk.css",
+    "static/js/main.93662ed8.chunk.js"
+  ]
+}
